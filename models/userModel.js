@@ -1,5 +1,5 @@
 // src/models/userModel.js
-const db = require('../../config/db'); 
+const db = require('../config/db'); 
 // Adjust path: config/db.js is at project root/config/db.js, so from src/models, require('../../config/db').
 
  /**

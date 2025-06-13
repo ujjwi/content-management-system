@@ -1,5 +1,5 @@
 // src/models/articleModel.js
-const db = require('../../config/db');
+const db = require('../config/db');
 
 /**
  * Create a new article.
