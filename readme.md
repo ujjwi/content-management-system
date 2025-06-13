@@ -1,0 +1,1 @@
+A content management system implemented using nodeJS, expressJS and postgreSQL (will detail this readme later)
