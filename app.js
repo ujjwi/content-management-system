@@ -15,9 +15,13 @@ app.use(express.json());
 // Health check endpoint
 app.get('/health', (req, res) => res.json({ status: 'OK' }));
 
-// Mount auth routes
+// Auth routes
 const authRoutes = require('./routes/authRoutes');
 app.use('/auth', authRoutes);
+
+// Article routes
+const articleRoutes = require('./routes/articleRoutes');
+app.use('/articles', articleRoutes);
 
 // Global error handler 
 const errorHandler = require('./middlewares/errorHandler');
