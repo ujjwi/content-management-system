@@ -27,6 +27,16 @@ router.post(
   createArticleHandler
 );
 
+router.postMultiple(
+  '/',
+  [
+    check('title').notEmpty().withMessage('Title is required'),
+    check('content').notEmpty().withMessage('Content is required'),
+  ],
+  validateRequest,
+  createMultipleArticleHandler
+);
+
 // GET /articles  (list with pagination)
 router.get(
   '/',

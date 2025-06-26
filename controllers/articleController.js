@@ -21,6 +21,16 @@ async function createArticleHandler(req, res, next) {
   }
 }
 
+async function createArticleHandler(req, res, next) {
+  try {
+    const data = req.body;
+    const article = await createNewArticle(req.user.id, data);
+    return res.status(201).json({ article });
+  } catch (err) {
+    next(err);
+  }
+}
+
 /**
  * GET /articles
  * Query: ?page=1&limit=10

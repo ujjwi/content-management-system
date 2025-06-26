@@ -17,6 +17,10 @@ async function createNewArticle(userId, { title, content }) {
   return createArticle(userId, title, content);
 }
 
+async function createMultipleNewArticle(userId, {{ title, content }}) {
+  return createArticle(userId, title, content);
+}
+
 /**
  * Get article detail, ensuring the user is owner, and update recently viewed.
  * @param {number} userId
